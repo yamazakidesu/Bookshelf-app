@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap');
+
+/* --- Reset dan Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: radial-gradient(ellipse at center, #2c1810 0%, #1a0f08 100%);
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 98px,
+            rgba(139, 69, 19, 0.03) 100px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 98px,
+            rgba(139, 69, 19, 0.03) 100px
+        );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- Container utama --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #f4f1e8 0%, #e8e2d0 100%);
+    border-radius: 0;
+    padding: 40px;
+    box-shadow: 
+        inset 0 0 50px rgba(139, 69, 19, 0.1),
+        0 10px 50px rgba(0, 0, 0, 0.3),
+        0 0 0 3px #8b4513,
+        0 0 0 6px #d4af37;
+    position: relative;
+    z-index: 2;
+    border: 3px double #8b4513;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px solid #d4af37;
+    border-radius: 0;
+    pointer-events: none;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3.2rem;
+    color: #2c1810;
+    text-shadow: 2px 2px 0 #d4af37, 4px 4px 0 #8b4513;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #3d2315;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 10px;
+}
+
+/* --- Form dan Input --- */
+.form-section,
+.search-section {
+    background: #fdfaf5;
+    padding: 25px;
+    border: 2px solid #d4af37;
+    margin-bottom: 30px;
+    box-shadow: 3px 3px 0 #8b4513, -3px -3px 0 #f4f1e8;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c1810;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #8b4513;
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    background: #fffaf0;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.btn {
+    background: linear-gradient(to bottom, #d4af37, #b8860b);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    box-shadow: 2px 2px 0 #8b4513;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #b8860b, #8b6914);
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 #8b4513;
+}
+
+/* --- Bookshelf --- */
+.bookshelf-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bookshelf {
+    flex: 1;
+    min-width: 280px;
+    background: #fdfaf5;
+    padding: 20px;
+    border: 2px solid #d4af37;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.book-item {
+    background: #fffaf0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #8b4513;
+    box-shadow: 2px 2px 0 #d4af37;
+}
+
+.book-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #2c1810;
+}
+
+.book-item p {
+    margin-bottom: 6px;
+    color: #4d2e1c;
+}
+
+.book-actions button {
+    margin-right: 8px;
+}
+
+/* --- Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fdfaf5;
+    margin: 10% auto;
+    padding: 20px;
+    border: 3px solid #d4af37;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 5px 5px 0 #8b4513;
+    position: relative;
+}
+
+.close {
+    color: #8b4513;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #d4af37;
+}

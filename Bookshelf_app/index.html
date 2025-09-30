@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Rak Buku</title>
+  <link rel="stylesheet" href="CSS/bookshelf.css">
+  <style>
+    .book-item { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+    .book-actions button { margin-right: 5px; }
+    #editModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                 background: rgba(0,0,0,0.5); }
+    #editModal .modal-content { background: white; margin: 10% auto; padding: 20px; width: 300px; }
+    .close { float: right; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>📚 Aplikasi Rak Buku</h1>
+
+  <!-- Form tambah buku -->
+  <form id="bookForm">
+    <input type="text" id="bookTitle" placeholder="Judul Buku" required>
+    <input type="text" id="bookAuthor" placeholder="Penulis" required>
+    <input type="number" id="bookYear" placeholder="Tahun" required>
+    <label>
+      <input type="checkbox" id="bookCompleted"> Selesai dibaca
+    </label>
+    <button type="submit">Tambah Buku</button>
+  </form>
+
+  <!-- Pencarian -->
+  <input type="text" id="searchInput" placeholder="Cari buku...">
+
+  <h2>Belum Selesai Dibaca</h2>
+  <div id="incompleteBookList"></div>
+
+  <h2>Selesai Dibaca</h2>
+  <div id="completeBookList"></div>
+
+  <!-- Modal edit buku -->
+  <div id="editModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Edit Buku</h3>
+      <form id="editForm">
+        <input type="text" id="editTitle" placeholder="Judul Buku" required>
+        <input type="text" id="editAuthor" placeholder="Penulis" required>
+        <input type="number" id="editYear" placeholder="Tahun" required>
+        <label>
+          <input type="checkbox" id="editCompleted"> Selesai dibaca
+        </label>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
