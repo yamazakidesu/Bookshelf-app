@@ -1,13 +1,13 @@
 # Bookshelf-app
 
-Project Description: Book Management Application
+Project Description: Book Management Web Application
 
-The Book Management Application is a simple yet practical mini project designed to help users organize and manage their personal book collection. This application provides essential features that allow users to:
+The Book Management Web Application is a simple yet functional system designed to help users organize and manage their personal book collections. The application provides an intuitive interface that allows users to perform the following key tasks:
 
-Add New Books – Users can input and store important details of each book, including the title, author, and year of publication.
+Add Books – Users can add new books by entering essential details such as the book title, author, and year of publication.
 
-Track Reading Status – Users can categorize their books into two lists: completed (books that have been read) and in-progress (books yet to be finished).
+Track Reading Status – Books can be categorized into two lists: Completed (books that have been read) and Uncompleted (books that are still pending). This feature helps users monitor their reading progress effectively.
 
-Search Functionality – Users can quickly find books within their collection by searching based on specific keywords, such as the book title or author.
+Search Functionality – The application includes a search feature that enables users to quickly find specific books within their collection by title.
 
-With a clean and user-friendly interface, this project demonstrates core functionality in data handling and user interaction. It serves as an excellent example of applying HTML, CSS, and JavaScript to build a functional web-based application.
+With a clean design and user-friendly features, this application provides a practical solution for readers who want to digitally manage their book lists. It can be extended with additional functionalities such as editing book details, deleting entries, or integrating cloud storage for persistent data management.
